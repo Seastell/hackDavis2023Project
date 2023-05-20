@@ -1,0 +1,80 @@
+<!-- leasetransfer.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Lost & Found</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .item-card {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .item-header {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Davis Lease Transfer</h1>
+        <p>If you wish to transfer your lease or get a sublease, please submit details below.</p>
+        <hr>
+        <h2>Report a Lease Transfer</h2>
+        <form id="item-form">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Your Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="phone">Your Phone:</label><br>
+            <input type="tel" id="phone" name="phone" required><br>
+            <label for="item">Address and Description:</label><br>
+            <textarea id="item" name="item" required
+                placeholder="Please enter the adress and feel free to add more details"></textarea><br>
+            <label for="status">Status:</label><br>
+            <select id="status" name="status">
+                <option value="lost">Waiting to Transfer</option>
+                <option value="found">Transfer In Progress</option>
+            </select><br>
+            <label for="roomType">Room Type:</label><br>
+            <select id="roomType" name="roomType">
+                <option value="1b1b">1b1b</option>
+                <option value="2b2b">2b2b</option>
+                <option value="2b1b">2b1b</option>
+                <option value="3b2b">4b1b</option>
+                <option value="3b3b">3b3b</option>
+                <option value="4b2b">4b2b</option>
+                <option value="4b3b">4b3b</option>
+                <option value="4b4b">4b4b</option>
+            </select><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <hr>
+        <h2>Recently Reported Lease Transfers</h2>
+        <div id="items-container">
+            <!-- Items will be dynamically inserted here -->
+        </div>
+    </div>
+    <script src="client.js"></script>
+</body>
+
+</html>
